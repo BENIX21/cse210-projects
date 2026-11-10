@@ -1,0 +1,28 @@
+What is abstraction and why is it important?
+
+Abstraction is one of the fundamental principles of programming. Essentially, it simplifies something complex by identifying its most important characteristics and behaviors and leaving aside the less important ones.
+
+The benefit is that it allows you to organize the code and makes it easier to manipulate. This allows us to work with objects without knowing so many details about how they work.
+
+An example is the resume project I developed in C#. In this project, I created two classes: Job and Resume.
+
+The Job class stores information about a job, including the job title, the company, and the start and end dates. It also has a method called Display(), which displays this information in an organized way.
+
+The Resume class stores a person's name and a list of jobs. Its Display() method shows the name and uses the method for each job to present all the work experience.
+
+An example of abstraction:
+
+public void Display()
+{
+    Console.WriteLine($"Name: {_name}");
+    Console.WriteLine("Jobs:");
+
+    foreach (Job job in _jobs)
+    {
+        job.Display();
+    }
+}
+
+In this example, the Resume class can display all the employment information without needing to know the internal details. It simply uses the Display() method.
+
+Abstracting is important because it allows you to view the program in smaller, more easily understandable parts. It also facilitates code reuse and allows you to make changes to one part of the program without having to modify the entire system.
