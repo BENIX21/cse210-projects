@@ -1,0 +1,20 @@
+Encapsulation is the process of grouping data and the methods that work with that data within the same class. This controls access, preventing unintentional modifications from other parts of the program
+
+One benefit of this is that it makes the code much more organized and easier to maintain. With everything grouped where it belongs, if something needs to be changed internally, the rest of the system won't break
+
+An example of this is clearly seen in our journal program, where we use the Entry class to store all the information for an entry, along with the function to display it
+
+public class Entry
+{
+    public string _date;
+    public string _promptText;
+    public string _entryText;
+
+    public void Display()
+    {
+        Console.WriteLine($"Fecha: {_date} - Pregunta: {_promptText}");
+        Console.WriteLine($"{_entryText}\n");
+    }
+}
+
+In this snippet, the variables containing the information and the Display() method are encapsulated within the Entry class. This allows each object to manage its own data cleanly, without loose variables, making the code much more logical and easier to read
